@@ -46,10 +46,14 @@ const App = () => {
 
 
 const Search = () => {
+  function handleChange(e){
+    console.log(e);
+    console.log(e.target.value);
+  }
   return(
     <>
       <label htmlFor="srch">Search: </label>
-      <input type="text" id='srch' />
+      <input type="text" id='srch' onInput={handleChange}/>
     </>
   )
 }
